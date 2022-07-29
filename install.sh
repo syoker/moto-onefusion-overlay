@@ -7,14 +7,14 @@ REPLACE="
 "
 
 android_check() {
- if [[ $API < 30 ]]; then
+ if (( $API < 30 )); then
     ui_print "• Sorry, support for Android 11, 12 & 12.1 only."
     ui_print ""
     sleep 2
     exit 1
  fi
- if [[ $API > 32 ]]; then
-    ui_print "• Sorry, support for Android 11, 12 & 12.1 only."
+ if (( $API > 32 )); then
+    ui_print "$API"
     ui_print ""
     sleep 2
     exit 1
