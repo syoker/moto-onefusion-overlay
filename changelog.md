@@ -1,5 +1,8 @@
 ## Changelog
 
+### v1.0.4
+- Fix rounded corners on Android 12 & 12.1
+
 ### v1.0.3
 - Add power_profile and resources
 
