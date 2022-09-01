@@ -38,9 +38,9 @@ on_install() {
   android_check
 
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
-  ui_print "- Extracting module files"
 
   if [[ $API == 30 ]]; then
+    ui_print "- Android 11 detected"
     mkdir -p $MODPATH/system/product/overlay
     mv -f $MODPATH/system/product/overlay/overlay30_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
     mv -f $MODPATH/system/product/overlay/overlay30_2.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_product.apk
@@ -52,6 +52,7 @@ on_install() {
     rm $MODPATH/system/product/overlay/overlay32_3.apk
   else
     if [[ $API == 31 ]]; then
+      ui_print "- Android 12 detected"
       mkdir -p $MODPATH/system/product/overlay
       mv -f $MODPATH/system/product/overlay/overlay31_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       mv -f $MODPATH/system/product/overlay/overlay31_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
@@ -62,6 +63,7 @@ on_install() {
       rm $MODPATH/system/product/overlay/overlay32_2.apk
       rm $MODPATH/system/product/overlay/overlay32_3.apk
     else
+      ui_print "- Android 12.1 detected"
       mv -f $MODPATH/system/product/overlay/overlay32_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       mv -f $MODPATH/system/product/overlay/overlay32_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
       mv -f $MODPATH/system/product/overlay/overlay32_3.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
@@ -72,7 +74,8 @@ on_install() {
       rm $MODPATH/system/product/overlay/overlay31_3.apk
     fi
   fi
-
+  
+  ui_print "- Extracting module files"
   ui_print "- Deleting package cache"
   rm -rf /data/system/package_cache/*
 }

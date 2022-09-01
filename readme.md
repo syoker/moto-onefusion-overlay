@@ -1,7 +1,7 @@
 # Motorola One Fusion Overlay
 
 ## Description
-This module installs all necessary rro-overlays for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
+This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
 
 ## Compatibility
 - Android 11R
