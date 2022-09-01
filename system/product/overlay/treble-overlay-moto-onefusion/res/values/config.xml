@@ -7,8 +7,8 @@
     <dimen name="status_bar_height_landscape">24.0dip</dimen>
     <dimen name="rounded_corner_radius_top">39.0dip</dimen>
     <dimen name="rounded_corner_radius_bottom">40.0dip</dimen>
-    <dimen name="config_buttonCornerRadius">40.0dip</dimen>
-    <dimen name="config_dialogCornerRadius">40.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">32.0dip</dimen>
+    <dimen name="config_dialogCornerRadius">32.0dip</dimen>
 
     <!-- bools -->
     <bool name="config_automatic_brightness_available">true</bool>
