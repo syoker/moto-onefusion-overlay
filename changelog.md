@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.7
+- Motorola One Fusion props added
+- Added new status bar padding for Android 11
+
 ### v1.0.6
 - Fix padding in one-handed mode.
 
