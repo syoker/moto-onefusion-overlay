@@ -4,6 +4,8 @@
 - Motorola One Fusion props added
 - Added new status bar padding for Android 11
 
+[_Full changelog_](https://github.com/Syoker/moto-onefusion-overlay/compare/v1.0.6...v1.0.7)
+
 ### v1.0.6
 - Fix padding in one-handed mode.
 
