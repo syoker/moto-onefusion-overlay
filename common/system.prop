@@ -1,0 +1,7 @@
+# begin common build properties
+ro.product.vendor.brand=motorola
+ro.product.vendor.device=astro
+ro.product.vendor.manufacturer=Motorola
+ro.product.vendor.model=Motorola One Fusion
+ro.product.vendor.name=astro_retail
+# end common build properties
