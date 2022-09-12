@@ -1,7 +1,7 @@
 id=moto-onefusion-overlay
 name=Motorola One Fusion Overlay
-version=v1.0.7
-versionCode=8
+version=v1.0.8
+versionCode=9
 author=Syoker
 description=This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
-updateJson=
+updateJson=https://raw.githubusercontent.com/Syoker/moto-onefusion-overlay/main/update.json

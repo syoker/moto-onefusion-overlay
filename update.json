@@ -1,6 +1,6 @@
 {
-    "version": "v1.0.7",
-    "versionCode": 8,
-    "zipUrl": "",
-    "changelog": ""
+    "version": "v1.0.8",
+    "versionCode": 9,
+    "zipUrl": "https://raw.githubusercontent.com/Syoker/moto-onefusion-overlay/main/changelog.md",
+    "changelog": "https://github.com/Syoker/moto-onefusion-overlay/releases/download/v1.0.8/moto-onefusion-overlay.zip"
 }
