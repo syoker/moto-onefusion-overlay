@@ -2,6 +2,7 @@
 
 ### v1.0.9
 - Adjusted the rounding of corners in multitasking
+- Device name in lower case
 
 [_Full changelog_](https://github.com/Syoker/moto-onefusion-overlay/compare/v1.0.8...v1.0.9)
 
