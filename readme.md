@@ -1,9 +1,11 @@
 # Motorola One Fusion Overlay
 
-![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay?label=License)
-
 This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
 > **NOTES:** This module only work in GSI
+
+![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
+![Commits](https://img.shields.io/github/commit-activity/m/syoker/moto-onefusion-overlay)
+![Downloads](https://shields.io/category/downloads)
 
 ## Compatibility
 - Android 11R
