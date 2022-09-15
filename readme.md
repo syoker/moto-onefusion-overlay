@@ -5,7 +5,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 
 ![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
 ![Commits](https://img.shields.io/github/commit-activity/m/syoker/moto-onefusion-overlay)
-![Downloads](https://shields.io/category/downloads)
+![Downloads](https://img.shields.io/github/downloads/syoker/moto-onefusion-overlay/total)
 
 ## Compatibility
 - Android 11R
