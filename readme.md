@@ -4,7 +4,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 > **NOTES:** This module only work in GSI
 
 ![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
-![Commits](https://img.shields.io/github/commit-activity/m/syoker/moto-onefusion-overlay)
+![Release date](https://img.shields.io/github/release-date/syoker/moto-onefusion-overlay)
 ![Downloads](https://img.shields.io/github/downloads/syoker/moto-onefusion-overlay/total)
 
 ## Compatibility
