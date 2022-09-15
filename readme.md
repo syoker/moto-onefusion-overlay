@@ -1,11 +1,19 @@
 # Motorola One Fusion Overlay
 
 This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
-> **NOTES:** This module only work in GSI
+> **NOTES:** This module only work in GSI.
 
 ![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
 ![Release date](https://img.shields.io/github/release-date/syoker/moto-onefusion-overlay)
 ![Downloads](https://img.shields.io/github/downloads/syoker/moto-onefusion-overlay/total)
+
+## Content
+- Motorola One Fusion props & resources.
+- Rounded corners of applications in their opening animation
+- Increased rounding of some buttons and apps in multitasking (A12 & A12.1).
+- Power profile from stock.
+- Fix for content location on lockscreen (A12 & A12.1)
+- Centred time, battery and rotation button.
 
 ## Compatibility
 - Android 11R
@@ -29,5 +37,5 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 - [CherishOS 3.7.5 v413](https://t.me/elranchodecornelio/166) by [ChonDoe](https://t.me/ChonDoe)
 - [SuperiorOS 12L v413](https://t.me/elranchodecornelio/165) by [ChonDoe](https://t.me/ChonDoe)
 
-## Screenshots
+## Differences
 ![](/gitimages/image1.png)
