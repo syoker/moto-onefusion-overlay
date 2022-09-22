@@ -1,6 +1,6 @@
 # Motorola One Fusion Overlay
 
-This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12 & A12.1 ONLY).
+This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12, A12.1 & A13 ONLY).
 > **NOTES:** This module only work in GSI.
 
 ![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
@@ -19,6 +19,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 - Android 11R
 - Android 12S
 - Android 12L
+- Android 13T
 
 ## Tested
 **Android 11R**
@@ -36,6 +37,10 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 - [Pixel Experience Plus 12.1 v415](https://github.com/ponces/treble_build_pe/releases/tag/v415-plus) by [Ponces](https://github.com/ponces)
 - [CherishOS 3.7.5 v413](https://t.me/elranchodecornelio/166) by [ChonDoe](https://t.me/ChonDoe)
 - [SuperiorOS 12L v413](https://t.me/elranchodecornelio/165) by [ChonDoe](https://t.me/ChonDoe)
+
+
+**Android 13T**
+- [SparkOS 13T](https://t.me/naz_dev/127) by [Nazim](https://t.me/naz664)
 
 ## Differences
 ![](/gitimages/image1.png)
