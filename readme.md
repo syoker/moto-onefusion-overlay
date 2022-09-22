@@ -10,7 +10,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 ## Content
 - Motorola One Fusion props & resources.
 - Rounded corners of applications in their opening animation.
-- Increased rounding of some buttons and apps in multitasking (A12 & A12.1).
+- Increased rounding of some buttons and apps in multitasking (A12, A12.1 & A13).
 - Power profile from stock.
 - Fix for content location on lockscreen (A12 & A12.1).
 - Centred time, battery and rotation button.
