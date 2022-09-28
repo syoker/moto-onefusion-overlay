@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.11
+- Fix lockscreen for A13
+
+[_Full changelog_](https://github.com/Syoker/moto-onefusion-overlay/compare/v1.0.10...v1.0.11)
+
 ### V1.0.10
 - Add A13 support
 
