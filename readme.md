@@ -12,7 +12,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 - Rounded corners of applications in their opening animation.
 - Increased rounding of some buttons and apps in multitasking (A12, A12.1 & A13).
 - Power profile from stock.
-- Fix for content location on lockscreen (A12 & A12.1).
+- Fix for content location on lockscreen (A12, A12.1 & A13).
 - Centred time, battery and rotation button.
 
 ## Compatibility
@@ -41,6 +41,7 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 
 **Android 13T**
 - [SparkOS 13T](https://t.me/naz_dev/127) by [Nazim](https://t.me/naz664)
+- [Pixel Experience 13](https://github.com/ponces/treble_build_pe/releases/tag/v2022.09.27) by [Ponces](https://github.com/ponces)
 
 ## Differences
 ![](/gitimages/image1.png)
