@@ -8,13 +8,13 @@ REPLACE="
 
 android_check() {
  if (( $API < 30 )); then
-    ui_print "• Sorry, support for Android 11, 12 & 12.1 only."
+    ui_print "• Sorry, support for Android 11, 12, 12.1 & 13 only."
     ui_print ""
     sleep 2
     exit 1
  fi
  if (( $API > 33 )); then
-    ui_print "• Sorry, support for Android 11, 12 & 12.1 only."
+    ui_print "• Sorry, support for Android 11, 12, 12.1 & 13 only."
     ui_print ""
     sleep 2
     exit 1
@@ -52,6 +52,7 @@ on_install() {
     rm $MODPATH/system/product/overlay/overlay32_3.apk
     rm $MODPATH/system/product/overlay/overlay33_1.apk
     rm $MODPATH/system/product/overlay/overlay33_2.apk
+    rm $MODPATH/system/product/overlay/overlay33_3.apk
   else
     if [[ $API == 31 ]]; then
       ui_print "- Android 12 detected"
@@ -66,6 +67,7 @@ on_install() {
       rm $MODPATH/system/product/overlay/overlay32_3.apk
       rm $MODPATH/system/product/overlay/overlay33_1.apk
       rm $MODPATH/system/product/overlay/overlay33_2.apk
+      rm $MODPATH/system/product/overlay/overlay33_3.apk
     else
       if [[ $API == 32 ]]; then
         ui_print "- Android 12.1 detected"
@@ -79,10 +81,12 @@ on_install() {
         rm $MODPATH/system/product/overlay/overlay31_3.apk
         rm $MODPATH/system/product/overlay/overlay33_1.apk
         rm $MODPATH/system/product/overlay/overlay33_2.apk
+        rm $MODPATH/system/product/overlay/overlay33_3.apk
       else 
         ui_print "- Android 13 detected"
         mv -f $MODPATH/system/product/overlay/overlay33_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
         mv -f $MODPATH/system/product/overlay/overlay33_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+        mv -f $MODPATH/system/product/overlay/overlay33_3.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
         rm $MODPATH/system/product/overlay/overlay30_1.apk
         rm $MODPATH/system/product/overlay/overlay30_2.apk
         rm $MODPATH/system/product/overlay/overlay31_1.apk
