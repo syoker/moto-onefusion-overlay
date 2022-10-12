@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">450.0px</dimen>
-    <dimen name="physical_power_button_center_screen_location_y">450.0px</dimen>
+    <dimen name="physical_power_button_center_screen_location_y">700.0px</dimen>
     <dimen name="physical_volume_down_button_center_screen_location_y">980.0px</dimen>
     <dimen name="physical_volume_up_button_center_screen_location_y">780.0px</dimen>
     <item type="dimen" name="proximity_sensor_threshold">1.0</item>
