@@ -1,2 +1,3 @@
 /system/product/overlay/*.apk
 /recovery/*
+/build/*
