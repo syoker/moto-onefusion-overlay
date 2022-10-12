@@ -7,18 +7,12 @@ REPLACE="
 "
 
 android_check() {
- if (( $API < 30 )); then
+ if (( $API < 30 || $API > 33)); then
     ui_print "• Sorry, support for Android 11, 12, 12.1 & 13 only."
     ui_print ""
     sleep 2
     exit 1
  fi
- if (( $API > 33 )); then
-    ui_print "• Sorry, support for Android 11, 12, 12.1 & 13 only."
-    ui_print ""
-    sleep 2
-    exit 1
-  fi
 }
 
 print_modname() {
@@ -39,7 +33,42 @@ on_install() {
 
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 
-  if [[ $API == 30 ]]; then
+  case $API in
+    30)
+      ui_print "- Android 11 detected"
+      cp -f $MODPATH/system/product/overlay/overlay-redvelvetcake.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      cp -f $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_product.apk
+    ;;
+    31)
+      ui_print "- Android 12 detected"
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+    ;;
+    32)
+      ui_print "- Android 12.1 detected"
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+    ;;
+    33)
+      ui_print "- Android 13 detected"
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+    ;;
+  esac
+
+  rm $MODPATH/system/product/overlay/overlay-redvelvetcake.apk
+  rm $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk
+  rm $MODPATH/system/product/overlay/overlay-snowcone.apk
+  rm $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk
+  rm $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk
+  rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
+  rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
+
+<< comment
+
+  if (( $API == 30 )); then
     ui_print "- Android 11 detected"
     mkdir -p $MODPATH/system/product/overlay
     mv -f $MODPATH/system/product/overlay/overlay-redvelvetcake.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
@@ -50,7 +79,7 @@ on_install() {
     rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
     rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
   else
-    if [[ $API == 31 ]]; then
+    if (( $API == 31 )); then
       ui_print "- Android 12 detected"
       mkdir -p $MODPATH/system/product/overlay
       mv -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
@@ -61,7 +90,7 @@ on_install() {
       rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
       rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
     else
-      if [[ $API == 32 ]]; then
+      if (( $API == 32 )); then
         ui_print "- Android 12.1 detected"
         mkdir -p $MODPATH/system/product/overlay
         mv -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
@@ -83,6 +112,8 @@ on_install() {
       fi
     fi
   fi
+
+comment
   
   ui_print "- Extracting module files"
   ui_print "- Deleting package cache"
