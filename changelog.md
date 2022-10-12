@@ -1,5 +1,12 @@
 ## Changelog
 
+### v1.0.12
+- Repackaged and renamed the lockscreen overlay.
+- Removed repeated overlays
+- Added correct values for physical buttons
+
+[_Full changelog_](https://github.com/Syoker/moto-onefusion-overlay/compare/v1.0.11...v1.0.12)
+
 ### v1.0.11
 - Fix lockscreen for A13
 
