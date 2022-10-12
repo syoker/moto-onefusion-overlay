@@ -42,59 +42,44 @@ on_install() {
   if [[ $API == 30 ]]; then
     ui_print "- Android 11 detected"
     mkdir -p $MODPATH/system/product/overlay
-    mv -f $MODPATH/system/product/overlay/overlay30_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
-    mv -f $MODPATH/system/product/overlay/overlay30_2.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_product.apk
-    rm $MODPATH/system/product/overlay/overlay31_1.apk
-    rm $MODPATH/system/product/overlay/overlay31_2.apk
-    rm $MODPATH/system/product/overlay/overlay31_3.apk
-    rm $MODPATH/system/product/overlay/overlay32_1.apk
-    rm $MODPATH/system/product/overlay/overlay32_2.apk
-    rm $MODPATH/system/product/overlay/overlay32_3.apk
-    rm $MODPATH/system/product/overlay/overlay33_1.apk
-    rm $MODPATH/system/product/overlay/overlay33_2.apk
-    rm $MODPATH/system/product/overlay/overlay33_3.apk
+    mv -f $MODPATH/system/product/overlay/overlay-redvelvetcake.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+    mv -f $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_product.apk
+    rm $MODPATH/system/product/overlay/overlay-snowcone.apk
+    rm $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk
+    rm $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk
+    rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
+    rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
   else
     if [[ $API == 31 ]]; then
       ui_print "- Android 12 detected"
       mkdir -p $MODPATH/system/product/overlay
-      mv -f $MODPATH/system/product/overlay/overlay31_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
-      mv -f $MODPATH/system/product/overlay/overlay31_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
-      mv -f $MODPATH/system/product/overlay/overlay31_3.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
-      rm $MODPATH/system/product/overlay/overlay30_1.apk
-      rm $MODPATH/system/product/overlay/overlay30_2.apk
-      rm $MODPATH/system/product/overlay/overlay32_1.apk
-      rm $MODPATH/system/product/overlay/overlay32_2.apk
-      rm $MODPATH/system/product/overlay/overlay32_3.apk
-      rm $MODPATH/system/product/overlay/overlay33_1.apk
-      rm $MODPATH/system/product/overlay/overlay33_2.apk
-      rm $MODPATH/system/product/overlay/overlay33_3.apk
+      mv -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      mv -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+      mv -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+      rm $MODPATH/system/product/overlay/overlay-redvelvetcake.apk
+      rm $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk
+      rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
+      rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
     else
       if [[ $API == 32 ]]; then
         ui_print "- Android 12.1 detected"
-        mv -f $MODPATH/system/product/overlay/overlay32_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
-        mv -f $MODPATH/system/product/overlay/overlay32_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
-        mv -f $MODPATH/system/product/overlay/overlay32_3.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
-        rm $MODPATH/system/product/overlay/overlay30_1.apk
-        rm $MODPATH/system/product/overlay/overlay30_2.apk
-        rm $MODPATH/system/product/overlay/overlay31_1.apk
-        rm $MODPATH/system/product/overlay/overlay31_2.apk
-        rm $MODPATH/system/product/overlay/overlay31_3.apk
-        rm $MODPATH/system/product/overlay/overlay33_1.apk
-        rm $MODPATH/system/product/overlay/overlay33_2.apk
-        rm $MODPATH/system/product/overlay/overlay33_3.apk
+        mkdir -p $MODPATH/system/product/overlay
+        mv -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+        mv -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+        mv -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+        rm $MODPATH/system/product/overlay/overlay-redvelvetcake.apk
+        rm $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk
+        rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
+        rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
       else 
         ui_print "- Android 13 detected"
-        mv -f $MODPATH/system/product/overlay/overlay33_1.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
-        mv -f $MODPATH/system/product/overlay/overlay33_2.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
-        mv -f $MODPATH/system/product/overlay/overlay33_3.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
-        rm $MODPATH/system/product/overlay/overlay30_1.apk
-        rm $MODPATH/system/product/overlay/overlay30_2.apk
-        rm $MODPATH/system/product/overlay/overlay31_1.apk
-        rm $MODPATH/system/product/overlay/overlay31_2.apk
-        rm $MODPATH/system/product/overlay/overlay31_3.apk
-        rm $MODPATH/system/product/overlay/overlay32_1.apk
-        rm $MODPATH/system/product/overlay/overlay32_2.apk
-        rm $MODPATH/system/product/overlay/overlay32_3.apk
+        mv -f $MODPATH/system/product/overlay/overlay-tiramisu.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+        mv -f $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+        rm $MODPATH/system/product/overlay/overlay-redvelvetcake.apk
+        rm $MODPATH/system/product/overlay/overlay-redvelvetcake-systemui.apk
+        rm $MODPATH/system/product/overlay/overlay-snowcone.apk
+        rm $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk
+        rm $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk
       fi
     fi
   fi
