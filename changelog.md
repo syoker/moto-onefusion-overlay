@@ -1,7 +1,7 @@
 ## Changelog
 
 ### v1.0.12
-- Repackaged and renamed the lockscreen overlay.
+- Repackaged and renamed the lockscreen overlay
 - Removed repeated overlays
 - Added correct values for physical buttons
 
