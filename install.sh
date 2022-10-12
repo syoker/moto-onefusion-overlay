@@ -43,18 +43,19 @@ on_install() {
       ui_print "- Android 12 detected"
       cp -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       cp -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
-      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-lockscreen.apk
     ;;
     32)
       ui_print "- Android 12.1 detected"
       cp -f $MODPATH/system/product/overlay/overlay-snowcone.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       cp -f $MODPATH/system/product/overlay/overlay-snowcone-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
-      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/SystemUI__auto_generated_rro_vendor.apk
+      cp -f $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-lockscreen.apk
     ;;
     33)
       ui_print "- Android 13 detected"
       cp -f $MODPATH/system/product/overlay/overlay-tiramisu.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       cp -f $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu-lockscreen.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-lockscreen.apk
     ;;
   esac
 
@@ -65,6 +66,7 @@ on_install() {
   rm $MODPATH/system/product/overlay/overlay-snowcone-lockscreen.apk
   rm $MODPATH/system/product/overlay/overlay-tiramisu.apk
   rm $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk
+  rm $MODPATH/system/product/overlay/overlay-tiramisu-lockscreen.apk
   
   ui_print "- Extracting module files"
   ui_print "- Deleting package cache"
