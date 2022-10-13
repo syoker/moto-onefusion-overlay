@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dimens -->    
+    <dimen name="status_bar_padding_start">23dp</dimen>
+    <dimen name="status_bar_padding_end">23dp</dimen>
+
+</resources>
