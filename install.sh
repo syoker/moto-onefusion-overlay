@@ -61,7 +61,7 @@ edit_buildprop_file() {
   MODEL_PRODUCT="ro.product.product.model=motorola one fusion"
   NAME_PRODUCT="ro.product.product.name=astro_retail"
 
-  if [ $BUILD_PROP_SYSTEM_PRODUCT_PATH !== "" ]; then
+  if [ $BUILD_PROP_SYSTEM_PRODUCT_PATH != "" ]; then
     sed -e "/^ro.product.product.brand/c\\$BRAND_PRODUCT" \
         -e "/^ro.product.product.device/c\\$DEVICE_PRODUCT" \
         -e "/^ro.product.product.manufacturer/c\\$MANUFACTURER_PRODUCT" \
@@ -75,7 +75,7 @@ edit_buildprop_file() {
   MODEL_SYSTEM="ro.product.system.model=motorola one fusion"
   NAME_SYSTEM="ro.product.system.name=astro_retail"
 
-  if [ $BUILD_PROP_SYSTEM_SYSTEM_PATH !== "" ]; then
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_PATH != "" ]; then
     sed -e "/^ro.product.system.brand/c\\$BRAND_SYSTEM" \
         -e "/^ro.product.system.device/c\\$DEVICE_SYSTEM" \
         -e "/^ro.product.system.manufacturer/c\\$MANUFACTURER_SYSTEM" \
@@ -89,7 +89,7 @@ edit_buildprop_file() {
   MODEL_SYSTEM_EXT="ro.product.system_ext.model=motorola one fusion"
   NAME_SYSTEM_EXT="ro.product.system_ext.name=astro_retail"
 
-  if [ $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH !== "" ]; then
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH != "" ]; then
     sed -e "/^ro.product.system_ext.brand/c\\$BRAND_SYSTEM_EXT" \
         -e "/^ro.product.system_ext.device/c\\$DEVICE_SYSTEM_EXT" \
         -e "/^ro.product.system_ext.manufacturer/c\\$MANUFACTURER_SYSTEM_EXT" \
@@ -103,7 +103,7 @@ edit_buildprop_file() {
   MODEL_SYSTEM_DLKM="ro.product.system_dlkm.model=motorola one fusion"
   NAME_SYSTEM_DLKM="ro.product.system_dlkm.name=astro_retail"
 
-  if [ $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH !== "" ]; then
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH != "" ]; then
     sed -e "/^ro.product.system_dlkm.brand/c\\$BRAND_SYSTEM_DLKM" \
         -e "/^ro.product.system_dlkm.device/c\\$DEVICE_SYSTEM_DLKM" \
         -e "/^ro.product.system_dlkm.manufacturer/c\\$MANUFACTURER_SYSTEM_DLKM" \
