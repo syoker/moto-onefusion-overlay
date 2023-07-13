@@ -43,13 +43,13 @@ edit_buildprop_file() {
     BUILD_PROP_MODPATH_SYSTEM_PATH="$MODPATH/system/build.prop"
   fi
 
-  if [ -f "system/system_ext/etc/build.prop" ]; then 
+  if [ -f "/system/system_ext/etc/build.prop" ]; then 
     mkdir -p $MODPATH/system/system_ext/etc
     BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH="/system/system_ext/etc/build.prop"
     BUILD_PROP_MODPATH_SYSTEM_EXT_PATH="$MODPATH/system/system_ext/etc/build.prop"
   fi
 
-  if [ -f "system/system_dlkm/etc/build.prop" ]; then
+  if [ -f "/system/system_dlkm/etc/build.prop" ]; then
     mkdir -p $MODPATH/system/system_dlkm/etc
     BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH="/system/system_dlkm/etc/build.prop"
     BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH="$MODPATH/system/system_dlkm/etc/build.prop"
