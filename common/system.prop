@@ -1,7 +1,7 @@
 # begin common build properties
-ro.product.vendor.brand=motorola
-ro.product.vendor.device=astro
-ro.product.vendor.manufacturer=motorola
-ro.product.vendor.model=motorola one fusion
-ro.product.vendor.name=astro_retail
+ro.product.product.brand=motorola
+ro.product.product.device=astro
+ro.product.product.manufacturer=motorola
+ro.product.product.model=motorola one fusion
+ro.product.product.name=astro_retail
 # end common build properties
