@@ -61,11 +61,13 @@ edit_buildprop_file() {
   MODEL_PRODUCT="ro.product.product.model=motorola one fusion"
   NAME_PRODUCT="ro.product.product.name=astro_retail"
 
-  sed -e "/^ro.product.product.brand/c\\$BRAND_PRODUCT" \
-      -e "/^ro.product.product.device/c\\$DEVICE_PRODUCT" \
-      -e "/^ro.product.product.manufacturer/c\\$MANUFACTURER_PRODUCT" \
-      -e "/^ro.product.product.model/c\\$MODEL_PRODUCT" \
-      -e "/^ro.product.product.name/c\\$NAME_PRODUCT" $BUILD_PROP_SYSTEM_PRODUCT_PATH > $BUILD_PROP_MODPATH_PRODUCT_PATH
+  if [ $BUILD_PROP_SYSTEM_PRODUCT_PATH !== "" ]; then
+    sed -e "/^ro.product.product.brand/c\\$BRAND_PRODUCT" \
+        -e "/^ro.product.product.device/c\\$DEVICE_PRODUCT" \
+        -e "/^ro.product.product.manufacturer/c\\$MANUFACTURER_PRODUCT" \
+        -e "/^ro.product.product.model/c\\$MODEL_PRODUCT" \
+        -e "/^ro.product.product.name/c\\$NAME_PRODUCT" $BUILD_PROP_SYSTEM_PRODUCT_PATH > $BUILD_PROP_MODPATH_PRODUCT_PATH
+  fi
 
   BRAND_SYSTEM="ro.product.system.brand=motorola"
   DEVICE_SYSTEM="ro.product.system.device=astro"
@@ -73,11 +75,13 @@ edit_buildprop_file() {
   MODEL_SYSTEM="ro.product.system.model=motorola one fusion"
   NAME_SYSTEM="ro.product.system.name=astro_retail"
 
-  sed -e "/^ro.product.system.brand/c\\$BRAND_SYSTEM" \
-      -e "/^ro.product.system.device/c\\$DEVICE_SYSTEM" \
-      -e "/^ro.product.system.manufacturer/c\\$MANUFACTURER_SYSTEM" \
-      -e "/^ro.product.system.model/c\\$MODEL_SYSTEM" \
-      -e "/^ro.product.system.name/c\\$NAME_SYSTEM" $BUILD_PROP_SYSTEM_SYSTEM_PATH > $BUILD_PROP_MODPATH_SYSTEM_PATH
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_PATH !== "" ]; then
+    sed -e "/^ro.product.system.brand/c\\$BRAND_SYSTEM" \
+        -e "/^ro.product.system.device/c\\$DEVICE_SYSTEM" \
+        -e "/^ro.product.system.manufacturer/c\\$MANUFACTURER_SYSTEM" \
+        -e "/^ro.product.system.model/c\\$MODEL_SYSTEM" \
+        -e "/^ro.product.system.name/c\\$NAME_SYSTEM" $BUILD_PROP_SYSTEM_SYSTEM_PATH > $BUILD_PROP_MODPATH_SYSTEM_PATH
+  fi
 
   BRAND_SYSTEM_EXT="ro.product.system_ext.brand=motorola"
   DEVICE_SYSTEM_EXT="ro.product.system_ext.device=astro"
@@ -85,11 +89,13 @@ edit_buildprop_file() {
   MODEL_SYSTEM_EXT="ro.product.system_ext.model=motorola one fusion"
   NAME_SYSTEM_EXT="ro.product.system_ext.name=astro_retail"
 
-  sed -e "/^ro.product.system_ext.brand/c\\$BRAND_SYSTEM_EXT" \
-      -e "/^ro.product.system_ext.device/c\\$DEVICE_SYSTEM_EXT" \
-      -e "/^ro.product.system_ext.manufacturer/c\\$MANUFACTURER_SYSTEM_EXT" \
-      -e "/^ro.product.system_ext.model/c\\$MODEL_SYSTEM_EXT" \
-      -e "/^ro.product.system_ext.name/c\\$NAME_SYSTEM_EXT" $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH > $BUILD_PROP_MODPATH_SYSTEM_EXT_PATH
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH !== "" ]; then
+    sed -e "/^ro.product.system_ext.brand/c\\$BRAND_SYSTEM_EXT" \
+        -e "/^ro.product.system_ext.device/c\\$DEVICE_SYSTEM_EXT" \
+        -e "/^ro.product.system_ext.manufacturer/c\\$MANUFACTURER_SYSTEM_EXT" \
+        -e "/^ro.product.system_ext.model/c\\$MODEL_SYSTEM_EXT" \
+        -e "/^ro.product.system_ext.name/c\\$NAME_SYSTEM_EXT" $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH > $BUILD_PROP_MODPATH_SYSTEM_EXT_PATH
+  fi
 
   BRAND_SYSTEM_DLKM="ro.product.system_dlkm.brand=motorola"
   DEVICE_SYSTEM_DLKM="ro.product.system_dlkm.device=astro"
@@ -97,11 +103,13 @@ edit_buildprop_file() {
   MODEL_SYSTEM_DLKM="ro.product.system_dlkm.model=motorola one fusion"
   NAME_SYSTEM_DLKM="ro.product.system_dlkm.name=astro_retail"
 
-  sed -e "/^ro.product.system_dlkm.brand/c\\$BRAND_SYSTEM_DLKM" \
-      -e "/^ro.product.system_dlkm.device/c\\$DEVICE_SYSTEM_DLKM" \
-      -e "/^ro.product.system_dlkm.manufacturer/c\\$MANUFACTURER_SYSTEM_DLKM" \
-      -e "/^ro.product.system_dlkm.model/c\\$MODEL_SYSTEM_DLKM" \
-      -e "/^ro.product.system_dlkm.name/c\\$NAME_SYSTEM_DLKM" $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH > $BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH
+  if [ $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH !== "" ]; then
+    sed -e "/^ro.product.system_dlkm.brand/c\\$BRAND_SYSTEM_DLKM" \
+        -e "/^ro.product.system_dlkm.device/c\\$DEVICE_SYSTEM_DLKM" \
+        -e "/^ro.product.system_dlkm.manufacturer/c\\$MANUFACTURER_SYSTEM_DLKM" \
+        -e "/^ro.product.system_dlkm.model/c\\$MODEL_SYSTEM_DLKM" \
+        -e "/^ro.product.system_dlkm.name/c\\$NAME_SYSTEM_DLKM" $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH > $BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH
+  fi
 }
 
 print_modname() {
