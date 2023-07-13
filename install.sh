@@ -16,12 +16,14 @@ android_check() {
 }
 
 edit_buildprop_file() {
-  BUILD_PROP_SYSTEM_PRODUCT_PATH="/system/product/build.prop"
-  BUILD_PROP_MODPATH_PRODUCT_PATH="$MODPATH/system/product/build.prop"
-  BUILD_PROP_SYSTEM_SYSTEM_PATH="/system/build.prop"
-  BUILD_PROP_MODPATH_SYSTEM_PATH="$MODPATH/system/build.prop"
-  BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH="/system/system_ext/etc/build.prop"
-  BUILD_PROP_MODPATH_SYSTEM_EXT_PATH="$MODPATH/system/system_ext/etc/build.prop"
+  BUILD_PROP_SYSTEM_PRODUCT_PATH=""
+  BUILD_PROP_MODPATH_PRODUCT_PATH=""
+  BUILD_PROP_SYSTEM_SYSTEM_PATH=""
+  BUILD_PROP_MODPATH_SYSTEM_PATH=""
+  BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH=""
+  BUILD_PROP_MODPATH_SYSTEM_EXT_PATH=""
+  BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH=""
+  BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH=""
 
   if [ -f "/system/product/etc/build.prop" ]; then
     mkdir -p $MODPATH/system/product/etc
@@ -45,6 +47,12 @@ edit_buildprop_file() {
     mkdir -p $MODPATH/system/system_ext/etc
     BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH="/system/system_ext/etc/build.prop"
     BUILD_PROP_MODPATH_SYSTEM_EXT_PATH="$MODPATH/system/system_ext/etc/build.prop"
+  fi
+
+  if [ -f "system/system_dlkm/etc/build.prop" ]; then
+    mkdir -p $MODPATH/system/system_dlkm/etc
+    BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH="/system/system_dlkm/etc/build.prop"
+    BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH="$MODPATH/system/system_dlkm/etc/build.prop"
   fi
 
   BRAND_PRODUCT="ro.product.product.brand=motorola"
@@ -82,6 +90,18 @@ edit_buildprop_file() {
       -e "/^ro.product.system_ext.manufacturer/c\\$MANUFACTURER_SYSTEM_EXT" \
       -e "/^ro.product.system_ext.model/c\\$MODEL_SYSTEM_EXT" \
       -e "/^ro.product.system_ext.name/c\\$NAME_SYSTEM_EXT" $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH > $BUILD_PROP_MODPATH_SYSTEM_EXT_PATH
+
+  BRAND_SYSTEM_DLKM="ro.product.system_dlkm.brand=motorola"
+  DEVICE_SYSTEM_DLKM="ro.product.system_dlkm.device=astro"
+  MANUFACTURER_SYSTEM_DLKM="ro.product.system_dlkm.manufacturer=motorola"
+  MODEL_SYSTEM_DLKM="ro.product.system_dlkm.model=motorola one fusion"
+  NAME_SYSTEM_DLKM="ro.product.system_dlkm.name=astro_retail"
+
+  sed -e "/^ro.product.system_dlkm.brand/c\\$BRAND_SYSTEM_DLKM" \
+      -e "/^ro.product.system_dlkm.device/c\\$DEVICE_SYSTEM_DLKM" \
+      -e "/^ro.product.system_dlkm.manufacturer/c\\$MANUFACTURER_SYSTEM_DLKM" \
+      -e "/^ro.product.system_dlkm.model/c\\$MODEL_SYSTEM_DLKM" \
+      -e "/^ro.product.system_dlkm.name/c\\$NAME_SYSTEM_DLKM" $BUILD_PROP_SYSTEM_SYSTEM_DLKM_PATH > $BUILD_PROP_MODPATH_SYSTEM_DLKM_PATH
 }
 
 print_modname() {
