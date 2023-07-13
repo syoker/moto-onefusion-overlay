@@ -1,3 +1,4 @@
 /system/product/overlay/*.apk
-/recovery/*
+/.temp/*
 /build/*
+*.zip

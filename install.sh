@@ -1,5 +1,5 @@
 SKIPMOUNT=false
-PROPFILE=true
+PROPFILE=false
 POSTFSDATA=false
 LATESTARTSERVICE=false
 
@@ -13,6 +13,75 @@ android_check() {
     sleep 2
     exit 1
  fi
+}
+
+edit_buildprop_file() {
+  BUILD_PROP_SYSTEM_PRODUCT_PATH="/system/product/build.prop"
+  BUILD_PROP_MODPATH_PRODUCT_PATH="$MODPATH/system/product/build.prop"
+  BUILD_PROP_SYSTEM_SYSTEM_PATH="/system/build.prop"
+  BUILD_PROP_MODPATH_SYSTEM_PATH="$MODPATH/system/build.prop"
+  BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH="/system/system_ext/etc/build.prop"
+  BUILD_PROP_MODPATH_SYSTEM_EXT_PATH="$MODPATH/system/system_ext/etc/build.prop"
+
+  if [ -f "/system/product/etc/build.prop" ]; then
+    mkdir -p $MODPATH/system/product/etc
+    BUILD_PROP_SYSTEM_PRODUCT_PATH="/system/product/etc/build.prop"
+    BUILD_PROP_MODPATH_PRODUCT_PATH="$MODPATH/system/product/etc/build.prop"
+  fi
+
+  if [ -f "/system/product/build.prop" ]; then
+    mkdir -p $MODPATH/system/product
+    BUILD_PROP_SYSTEM_PRODUCT_PATH="/system/product/build.prop"
+    BUILD_PROP_MODPATH_PRODUCT_PATH="$MODPATH/system/product/build.prop"
+  fi
+
+  if [ -f "/system/build.prop" ]; then
+    mkdir -p $MODPATH/system
+    BUILD_PROP_SYSTEM_SYSTEM_PATH="/system/build.prop"
+    BUILD_PROP_MODPATH_SYSTEM_PATH="$MODPATH/system/build.prop"
+  fi
+
+  if [ -f "system/system_ext/etc/build.prop" ]; then 
+    mkdir -p $MODPATH/system/system_ext/etc
+    BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH="/system/system_ext/etc/build.prop"
+    BUILD_PROP_MODPATH_SYSTEM_EXT_PATH="$MODPATH/system/system_ext/etc/build.prop"
+  fi
+
+  BRAND_PRODUCT="ro.product.product.brand=motorola"
+  DEVICE_PRODUCT="ro.product.product.device=astro"
+  MANUFACTURER_PRODUCT="ro.product.product.manufacturer=motorola"
+  MODEL_PRODUCT="ro.product.product.model=motorola one fusion"
+  NAME_PRODUCT="ro.product.product.name=astro_retail"
+
+  sed -e "/^ro.product.product.brand/c\\$BRAND_PRODUCT" \
+      -e "/^ro.product.product.device/c\\$DEVICE_PRODUCT" \
+      -e "/^ro.product.product.manufacturer/c\\$MANUFACTURER_PRODUCT" \
+      -e "/^ro.product.product.model/c\\$MODEL_PRODUCT" \
+      -e "/^ro.product.product.name/c\\$NAME_PRODUCT" $BUILD_PROP_SYSTEM_PRODUCT_PATH > $BUILD_PROP_MODPATH_PRODUCT_PATH
+
+  BRAND_SYSTEM="ro.product.system.brand=motorola"
+  DEVICE_SYSTEM="ro.product.system.device=astro"
+  MANUFACTURER_SYSTEM="ro.product.system.manufacturer=motorola"
+  MODEL_SYSTEM="ro.product.system.model=motorola one fusion"
+  NAME_SYSTEM="ro.product.system.name=astro_retail"
+
+  sed -e "/^ro.product.system.brand/c\\$BRAND_SYSTEM" \
+      -e "/^ro.product.system.device/c\\$DEVICE_SYSTEM" \
+      -e "/^ro.product.system.manufacturer/c\\$MANUFACTURER_SYSTEM" \
+      -e "/^ro.product.system.model/c\\$MODEL_SYSTEM" \
+      -e "/^ro.product.system.name/c\\$NAME_SYSTEM" $BUILD_PROP_SYSTEM_SYSTEM_PATH > $BUILD_PROP_MODPATH_SYSTEM_PATH
+
+  BRAND_SYSTEM_EXT="ro.product.system_ext.brand=motorola"
+  DEVICE_SYSTEM_EXT="ro.product.system_ext.device=astro"
+  MANUFACTURER_SYSTEM_EXT="ro.product.system_ext.manufacturer=motorola"
+  MODEL_SYSTEM_EXT="ro.product.system_ext.model=motorola one fusion"
+  NAME_SYSTEM_EXT="ro.product.system_ext.name=astro_retail"
+
+  sed -e "/^ro.product.system_ext.brand/c\\$BRAND_SYSTEM_EXT" \
+      -e "/^ro.product.system_ext.device/c\\$DEVICE_SYSTEM_EXT" \
+      -e "/^ro.product.system_ext.manufacturer/c\\$MANUFACTURER_SYSTEM_EXT" \
+      -e "/^ro.product.system_ext.model/c\\$MODEL_SYSTEM_EXT" \
+      -e "/^ro.product.system_ext.name/c\\$NAME_SYSTEM_EXT" $BUILD_PROP_SYSTEM_SYSTEM_EXT_PATH > $BUILD_PROP_MODPATH_SYSTEM_EXT_PATH
 }
 
 print_modname() {
@@ -32,6 +101,8 @@ on_install() {
   android_check
 
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
+  
+  edit_buildprop_file
 
   case $API in
     30)
