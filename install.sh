@@ -74,9 +74,10 @@ edit_buildprop_file() {
   MANUFACTURER_SYSTEM="ro.product.system.manufacturer=motorola"
   MODEL_SYSTEM="ro.product.system.model=motorola one fusion"
   NAME_SYSTEM="ro.product.system.name=astro_retail"
-
+  
   # For Project Elixir
-  ORG_ELIXIR_DEVICE="org.elixir.device=Motorola One Fusion"
+  RO_BUILD_PRODUCT="ro.build.product=motorola one fusion"
+  ORG_ELIXIR_DEVICE="org.elixir.device=motorola one fusion"
 
   if [ $BUILD_PROP_SYSTEM_SYSTEM_PATH != "" ]; then
     sed -e "/^ro.product.system.brand/c\\$BRAND_SYSTEM" \
@@ -84,7 +85,8 @@ edit_buildprop_file() {
         -e "/^ro.product.system.manufacturer/c\\$MANUFACTURER_SYSTEM" \
         -e "/^ro.product.system.model/c\\$MODEL_SYSTEM" \
         -e "/^ro.product.system.name/c\\$NAME_SYSTEM" \
-        -e "/^org.elixir.device/c\\$ORG_ELIXIR_DEVICE" $BUILD_PROP_SYSTEM_SYSTEM_PATH > $BUILD_PROP_MODPATH_SYSTEM_PATH
+        -e "/^org.elixir.device/c\\$ORG_ELIXIR_DEVICE" \
+        -e "/^ro.build.product/c\\$RO_BUILD_PRODUCT" $BUILD_PROP_SYSTEM_SYSTEM_PATH > $BUILD_PROP_MODPATH_SYSTEM_PATH
   fi
 
   BRAND_SYSTEM_EXT="ro.product.system_ext.brand=motorola"
