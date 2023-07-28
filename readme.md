@@ -50,4 +50,4 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 
 ## Differences
 
-![](https://github.com/Syoker/moto-onefusion-overlay/blob/a789471a41358416391c1c52ead137d85d82d754/.github/img/01.png)
+![](https://raw.githubusercontent.com/Syoker/moto-onefusion-overlay/a789471a41358416391c1c52ead137d85d82d754/.github/img/01.png)
