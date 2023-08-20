@@ -2,6 +2,8 @@
 
 This module installs all necessary RROs (Runtime Resources Overlays) for the correct function of the GSI in the Motorola One Fusion (A11, A12, A12.1 & A13 ONLY).
 
+![](https://raw.githubusercontent.com/syoker/moto-onefusion-overlay/main/.github/img/image.png)
+
 > **NOTES:** This module only work in GSI.
 
 ![License](https://img.shields.io/github/license/syoker/moto-onefusion-overlay)
@@ -47,7 +49,3 @@ This module installs all necessary RROs (Runtime Resources Overlays) for the cor
 
 - [SparkOS 13T](https://t.me/naz_dev/127) by [Nazim](https://t.me/naz664)
 - [Pixel Experience 13](https://github.com/ponces/treble_build_pe/releases/tag/v2022.09.27) by [Ponces](https://github.com/ponces)
-
-## Differences
-
-![](https://raw.githubusercontent.com/Syoker/moto-onefusion-overlay/a789471a41358416391c1c52ead137d85d82d754/.github/img/01.png)
