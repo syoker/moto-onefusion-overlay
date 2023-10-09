@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- dimens -->    
+    <!-- dimens -->
     <dimen name="rounded_corner_content_padding">23.0dip</dimen>
     <dimen name="keyguard_carrier_text_margin">32.0dip</dimen>
 
