@@ -1,4 +1,1 @@
-/system/product/overlay/*.apk
-/.temp/*
-/build/*
 *.zip

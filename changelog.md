@@ -1,6 +1,10 @@
 ## Changelog
 
-### v.1.13.0
+### v1.14.0
+
+- Added Android 14 support
+
+### v1.13.0
 
 - Added Motorola One Fusion properties to system, system_ext, system_dlkm and product build.prop.
   > NOTE: Tested only on Pixel Experience 11 GSI by Ponces

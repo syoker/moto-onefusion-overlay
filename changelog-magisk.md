@@ -1,7 +1,5 @@
-### v.1.0.13
+### v.1.0.14
 
-- Added Motorola One Fusion properties to system, system_ext, system_dlkm and product build.prop.
-  > NOTE: Tested only on Pixel Experience 11 GSI by Ponces
-- Changed the versioning system
+- Added Android 14 support.
 
-**Full Changelog**: https://github.com/Syoker/moto-onefusion-overlay/compare/v1.0.12...v1.13.0
+**Full Changelog**: https://github.com/Syoker/moto-onefusion-overlay/compare/v1.13.0...v1.14.0

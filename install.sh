@@ -7,8 +7,8 @@ REPLACE="
 "
 
 android_check() {
- if (( $API < 30 || $API > 33)); then
-    ui_print "• Sorry, support for Android 11, 12, 12.1 & 13 only."
+ if (( $API < 30 || $API > 34)); then
+    ui_print "• Sorry, support for Android 11, 12, 12.1, 13 & 14 only."
     ui_print ""
     sleep 2
     exit 1
@@ -158,6 +158,12 @@ on_install() {
     ;;
     33)
       ui_print "- Android 13 detected"
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
+      cp -f $MODPATH/system/product/overlay/overlay-tiramisu-lockscreen.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-lockscreen.apk
+    ;;
+    34)
+      ui_print "- Android 14 detected"
       cp -f $MODPATH/system/product/overlay/overlay-tiramisu.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion.apk
       cp -f $MODPATH/system/product/overlay/overlay-tiramisu-systemui.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-systemui.apk
       cp -f $MODPATH/system/product/overlay/overlay-tiramisu-lockscreen.apk $MODPATH/system/product/overlay/treble-overlay-moto-onefusion-lockscreen.apk
